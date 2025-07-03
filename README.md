@@ -37,7 +37,7 @@ A CPU design that uses **many complex instructions**, some of which may take **m
 - Fewer registers
 - Hardware is **complex and power-hungry**
 
-### 🛠Example Instructions (CISC – x86):
+### Example Instructions (CISC – x86):
 
 ```asm
 MOV AX, [BX]    ; Move from memory to AX directly  
@@ -50,7 +50,8 @@ ADD AX, 10      ; Add 10 to AX
 - Harder to pipeline
 
 ### Part 3: RISC vs CISC – Comparison Table
-
+```
+Q)What is the difference between RISC and CISC?
 | Feature                  | RISC (ARM)             | CISC (x86)              |
 |--------------------------|------------------------|--------------------------|
 | Instruction Set          | Small and simple       | Large and complex        |
@@ -61,7 +62,7 @@ ADD AX, 10      ; Add 10 to AX
 | Code Size                | Larger (more lines)    | Smaller                  |
 | Execution Speed          | High                   | Moderate                 |
 | Used In                  | Mobiles, Embedded      | PCs, Laptops             |
-
+```
 ### Part 4: History of ARM
 
 | Year        | Event                                                  |
