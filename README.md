@@ -12,20 +12,18 @@ Understand:
 - History & evolution
 
 
-## 1.What is a CPU Architecture?
+## 1.CPU Architecture?
 ```
+Q).What is a CPU Architecture?
+Ans :-
 **CPU architecture** = design or blueprint of how a processor works.
-
 It defines:
-
 - How instructions are executed  
 - How data is stored/moved  
 - How the control unit and ALU operate  
-
 **Examples**: x86, MIPS, RISC-V, ARM
 ```
 ## How Instructions Are Executed
-
 ### Definition:
 An **instruction** is a small command like `add`, `load`, `store`, or `compare`.  
 The **CPU reads** these instructions from memory and **executes** them step by step.
@@ -37,13 +35,10 @@ The **CPU reads** these instructions from memory and **executes** them step by s
 3. **Execute** – CPU performs the task (e.g., adding numbers).
 4. **Write-back** – Result is stored in a register or memory.
 
----
-
 ### Example (ADD Instruction)
 
 ```assembly
 ADD R0, R1, R2    ; R0 = R1 + R2
-
 ```
 ## 2. How Data is Stored/Accessed (Memory Movement)
 
@@ -64,16 +59,12 @@ ADD R0, R1, R2    ; R0 = R1 + R2
 
 These are called **load/store instructions** and are key to RISC architectures like ARM.
 
----
-
 ### Example:
-
 #### Given:
-
 ```text
 R1 = 0x2000  
 Memory[0x2000] = 99
-
+```
 
 ## 2.What is ARM?
 ```
