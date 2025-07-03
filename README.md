@@ -19,12 +19,14 @@ ADD R1, R0, #2  ; Add 2 to R0 and store in R1
 STR R1, [R2]    ; Store R1 value into memory pointed by R2
 ```
 ### Advantages of RISC:
+```
+Q) What is the main advantage of RISC architecture?
 
 - Faster execution (due to simple instructions)
 - Easier pipelining
 - Low power consumption
 - Simple hardware → cheaper
-
+```
 ## Part 2: What is CISC?
 
 **CISC = Complex Instruction Set Computer**  
@@ -52,6 +54,7 @@ ADD AX, 10      ; Add 10 to AX
 ### Part 3: RISC vs CISC – Comparison Table
 ```
 Q)What is the difference between RISC and CISC?
+
 | Feature                  | RISC (ARM)             | CISC (x86)              |
 |--------------------------|------------------------|--------------------------|
 | Instruction Set          | Small and simple       | Large and complex        |
