@@ -1,6 +1,6 @@
 # DAY 1: What is ARM Architecture? (Introduction + History + Basics)
 
-## 🎯 Goal of Day 1
+## Goal of Day 1
 
 Understand:
 
@@ -23,6 +23,57 @@ It defines:
 
 **Examples**: x86, MIPS, RISC-V, ARM
 ```
+## How Instructions Are Executed
+
+### Definition:
+An **instruction** is a small command like `add`, `load`, `store`, or `compare`.  
+The **CPU reads** these instructions from memory and **executes** them step by step.
+
+### Phases of Instruction Execution (Instruction Cycle):
+
+1. **Fetch** – CPU gets the instruction from memory.
+2. **Decode** – CPU understands what the instruction is.
+3. **Execute** – CPU performs the task (e.g., adding numbers).
+4. **Write-back** – Result is stored in a register or memory.
+
+---
+
+### Example (ADD Instruction)
+
+```assembly
+ADD R0, R1, R2    ; R0 = R1 + R2
+
+```
+## 2. How Data is Stored/Accessed (Memory Movement)
+
+### Memory Types:
+
+| Memory Type   | Description                                                 |
+|---------------|-------------------------------------------------------------|
+| **Registers** | Small, fast storage inside the CPU (e.g., R0, R1)           |
+| **RAM**       | Main memory; larger but slower than registers               |
+| **Cache**     | Medium-speed memory between RAM and CPU; improves access time |
+
+---
+
+### Instructions for Moving Data:
+
+- `LDR` → **Load** data from memory into a register
+- `STR` → **Store** data from a register into memory
+
+These are called **load/store instructions** and are key to RISC architectures like ARM.
+
+---
+
+### Example:
+
+#### Given:
+
+```text
+R1 = 0x2000  
+Memory[0x2000] = 99
+
+
 ## 2.What is ARM?
 ```
 - **ARM** stands for **Advanced RISC Machine**  
