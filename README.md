@@ -4,7 +4,8 @@
 
 Understand:
 
-- What ARM is  
+- What is CPU Architecture what is does
+- What is ARM   
 - Why ARM is used  
 - Where ARM is used  
 - Difference between ARM vs others  
