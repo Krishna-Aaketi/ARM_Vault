@@ -66,6 +66,26 @@ Q)What is the difference between RISC and CISC?
 | Execution Speed          | High                   | Moderate                 |
 | Used In                  | Mobiles, Embedded      | PCs, Laptops             |
 ```
+## What is ARM?
+```
+- **ARM** stands for **Advanced RISC Machine**  
+- It is a **RISC-based processor architecture**  
+- Created by a UK company named **ARM Holdings**  
+- **ARM Holdings licenses** the design, doesn't manufacture chips  
+
+**Examples of users**: Apple, Samsung, Qualcomm all use ARM cores.
+```
+## 5.Where is ARM Used?
+```
+| Device           | Example                     | ARM Chip            |
+|------------------|-----------------------------|----------------------|
+| Smartphones      | iPhone, Samsung Galaxy       | Cortex-A             |
+| Embedded Systems | Smartwatch, Fitness bands    | Cortex-M             |
+| Automotive       | Car ECU, infotainment        | Cortex-R             |
+| IoT Devices      | Smart bulb, WiFi switches    | Cortex-M0/M4         |
+| Laptops/Tablets  | MacBook M1, iPad             | Apple ARM-based SoCs |
+```
+
 ### Part 4: History of ARM
 
 | Year        | Event                                                  |
