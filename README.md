@@ -78,3 +78,116 @@ Q)What is the difference between RISC and CISC?
 | 2010        | ARM becomes dominant in smartphones                    |
 | 2020        | Apple shifts Macs to ARM-based M1 chip                 |
 | 2021+       | ARM enters data centers, AI, ML, automotive            |
+
+# Day 2: ARM Family Overview (ARM7, ARM9, Cortex-A / M / R)
+
+## ARM Architecture Family Tree
+
+ARM's processor families have evolved in three major stages:
+
+1. **Classic ARM** (ARM7, ARM9, ARM11)
+2. **Cortex Series** (Cortex-M, Cortex-R, Cortex-A)
+3. **Neoverse** (For cloud/server/datacenter)
+
+
+## 1. ARM7 Family
+
+- One of the most successful early cores
+- Based on ARMv4T architecture
+- 32-bit RISC architecture
+- No cache or MMU (Memory Management Unit)
+- Used in early mobile phones, low-end microcontrollers
+
+**Used In**:
+- Nokia feature phones
+- LPC2148 (NXP microcontroller)
+- Low-end embedded systems
+
+## 2. ARM9 Family
+
+- Improvement over ARM7
+- Based on ARMv5TE architecture
+- Supports cache, MMU → used for embedded Linux
+- Faster and more capable
+
+**Used In**:
+- GPS devices
+- Routers
+- Set-top boxes
+- Entry-level smartphones (2005–2010)
+
+## 3. Cortex Series (ARMv7, ARMv8, ARMv9)
+
+ARM divided this into 3 sub-families for targeted applications:
+
+### Cortex-M Family – For Microcontrollers
+
+- Optimized for real-time and embedded systems
+- Low power, simple design
+- ARMv7-M and ARMv8-M architecture
+- NVIC, SysTick, and easy interrupt handling
+
+#### Common Cores:
+| Core       | Use Case                        |
+|------------|---------------------------------|
+| Cortex-M0  | Ultra-low power                 |
+| Cortex-M3  | General purpose MCU             |
+| Cortex-M4  | DSP + MCU (with FPU)            |
+| Cortex-M7  | High-performance MCU            |
+| Cortex-M33 | Secure IoT (TrustZone support)  |
+
+**Used In**:
+- STM32, NXP LPC, TI Tiva
+- Smart home devices, wearables, sensors
+
+### Cortex-R Family – For Real-Time Applications
+
+- High performance + real-time responsiveness
+- ARMv7-R architecture
+- Includes Tightly Coupled Memory (TCM)
+- Deterministic behavior and fault tolerance
+
+**Used In**:
+- Automotive (ABS, engine control)
+- Industrial control systems
+- HDD/SSD controllers
+
+### Cortex-A Family – For Application Processors
+
+- Supports virtual memory, MMU, OS (Linux, Android)
+- Used in smartphones, tablets, smart TVs
+- ARMv7-A, ARMv8-A, ARMv9-A architectures
+- Multicore + SIMD + NEON support
+
+#### Common Cores:
+| Core        | Feature Set                    |
+|-------------|---------------------------------|
+| Cortex-A7   | Power-efficient mobile cores    |
+| Cortex-A9   | Dual/quad-core, smartphones     |
+| Cortex-A53  | 64-bit, mid-range processors    |
+| Cortex-A72  | High-performance                |
+| Cortex-A78  | Used in latest Android SoCs     |
+
+ **Used In**:
+- Snapdragon, MediaTek, Exynos SoCs
+- Android Phones, Raspberry Pi, Chromebooks
+
+## Summary Table: ARM Families and Their Uses
+
+| Family      | Used In                          | Key Feature                  |
+|-------------|----------------------------------|------------------------------|
+| ARM7        | Early phones, simple MCUs        | Basic 32-bit core            |
+| ARM9        | Routers, early smart devices     | MMU, cache support           |
+| Cortex-M    | MCUs, IoT, smart devices         | Low power, interrupt support |
+| Cortex-R    | Real-time/automotive systems     | Deterministic, fault-tolerant|
+| Cortex-A    | Phones, tablets, high-end apps   | Full OS, high performance    |
+
+
+## Conclusion:
+
+- **ARM7/9**: Older, used in simpler embedded systems
+- **Cortex-M**: Ideal for low-power embedded and IoT devices
+- **Cortex-R**: Perfect for safety-critical real-time apps
+- **Cortex-A**: Runs Android/Linux — high-end performance
+
+
