@@ -1,4 +1,4 @@
-# Day 1: RISC vs CISC + History of ARM
+# Day 1: RISC vs CISC + Basic idea + History of ARM
 
 ## Part 1: What is RISC?
 
@@ -66,7 +66,7 @@ Q)What is the difference between RISC and CISC?
 | Execution Speed          | High                   | Moderate                 |
 | Used In                  | Mobiles, Embedded      | PCs, Laptops             |
 ```
-## What is ARM?
+## Part 4: 1.What is ARM?
 ```
 - **ARM** stands for **Advanced RISC Machine**  
 - It is a **RISC-based processor architecture**  
@@ -75,7 +75,7 @@ Q)What is the difference between RISC and CISC?
 
 **Examples of users**: Apple, Samsung, Qualcomm all use ARM cores.
 ```
-## 5.Where is ARM Used?
+## 2.Where is ARM Used?
 ```
 | Device           | Example                     | ARM Chip            |
 |------------------|-----------------------------|----------------------|
@@ -85,8 +85,16 @@ Q)What is the difference between RISC and CISC?
 | IoT Devices      | Smart bulb, WiFi switches    | Cortex-M0/M4         |
 | Laptops/Tablets  | MacBook M1, iPad             | Apple ARM-based SoCs |
 ```
+## 3.Why is ARM so Popular?
+```
+- Low power usage  
+- High performance per watt  
+- Licensable → others can customize (e.g. Apple M1)  
+- Small size → fits in embedded devices  
+- Growing ecosystem (STM32, Raspberry Pi, Android)
+```
 
-### Part 4: History of ARM
+### 4.History of ARM
 
 | Year        | Event                                                  |
 |-------------|--------------------------------------------------------|
