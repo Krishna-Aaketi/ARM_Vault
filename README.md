@@ -75,7 +75,7 @@ Q)What is the difference between RISC and CISC?
 
 **Examples of users**: Apple, Samsung, Qualcomm all use ARM cores.
 ```
-## 2.Where is ARM Used?
+### 2.Where is ARM Used?
 ```
 | Device           | Example                     | ARM Chip            |
 |------------------|-----------------------------|----------------------|
@@ -85,7 +85,7 @@ Q)What is the difference between RISC and CISC?
 | IoT Devices      | Smart bulb, WiFi switches    | Cortex-M0/M4         |
 | Laptops/Tablets  | MacBook M1, iPad             | Apple ARM-based SoCs |
 ```
-## 3.Why is ARM so Popular?
+### 3.Why is ARM so Popular?
 ```
 - Low power usage  
 - High performance per watt  
