@@ -1,143 +1,58 @@
-# DAY 1: What is ARM Architecture? (Introduction + History + Basics)
-
-## Goal of Day 1
-
-Understand:
-
-- What is CPU Architecture what is does
-- What is ARM   
-- Why ARM is used  
-- Where ARM is used  
-- Difference between ARM vs others  
-- History & evolution
-
-
-## 1.CPU Architecture?
-```
-Q).What is a CPU Architecture?
-Ans :-
-**CPU architecture** = design or blueprint of how a processor works.
-It defines:
-- How instructions are executed  
-- How data is stored/moved  
-- How the control unit and ALU operate  
-**Examples**: x86, MIPS, RISC-V, ARM
-```
-## How Instructions Are Executed
-### Definition:
-An **instruction** is a small command like `add`, `load`, `store`, or `compare`.  
-The **CPU reads** these instructions from memory and **executes** them step by step.
-
-### Phases of Instruction Execution (Instruction Cycle):
-
-1. **Fetch** – CPU gets the instruction from memory.
-2. **Decode** – CPU understands what the instruction is.
-3. **Execute** – CPU performs the task (e.g., adding numbers).
-4. **Write-back** – Result is stored in a register or memory.
-
-### Example (ADD Instruction)
-
-```assembly
-ADD R0, R1, R2    ; R0 = R1 + R2
-```
-## 2. How Data is Stored/Accessed (Memory Movement)
-
-### Memory Types:
-
-| Memory Type   | Description                                                 |
-|---------------|-------------------------------------------------------------|
-| **Registers** | Small, fast storage inside the CPU (e.g., R0, R1)           |
-| **RAM**       | Main memory; larger but slower than registers               |
-| **Cache**     | Medium-speed memory between RAM and CPU; improves access time |
+# Day 1: RISC vs CISC + History of ARM
 
 ---
 
-### Instructions for Moving Data:
+## ✅ Part 1: What is RISC?
 
-- `LDR` → **Load** data from memory into a register
-- `STR` → **Store** data from a register into memory
+**RISC = Reduced Instruction Set Computer**  
+A CPU design that uses a **small set of simple instructions** that execute very fast.
 
-These are called **load/store instructions** and are key to RISC architectures like ARM.
+### 🟢 Key Features of RISC:
+- Each instruction takes **1 clock cycle** to execute (ideally)
+- Focuses on **simplicity and speed**
+- Uses **many general-purpose registers**
+- Fewer instruction formats → **easier decoding**
+- **Load/Store architecture** → only `LOAD` and `STORE` access memory
 
-### Example:
-#### Given:
-```text
-R1 = 0x2000  
-Memory[0x2000] = 99
+### 🛠️ Example Instructions (RISC):
+```asm
+MOV R0, #5      ; Load 5 into R0  
+ADD R1, R0, #2  ; Add 2 to R0 and store in R1  
+STR R1, [R2]    ; Store R1 value into memory pointed by R2
 ```
+### ✅ Advantages of RISC:
 
-## 2.What is ARM?
-```
-- **ARM** stands for **Advanced RISC Machine**  
-- It is a **RISC-based processor architecture**  
-- Created by a UK company named **ARM Holdings**  
-- **ARM Holdings licenses** the design, doesn't manufacture chips  
+- Faster execution (due to simple instructions)
+- Easier pipelining
+- Low power consumption
+- Simple hardware → cheaper
 
-**Examples of users**: Apple, Samsung, Qualcomm all use ARM cores.
-```
-## 3.What is RISC?
-```
-| Feature     | RISC (like ARM)        | CISC (like x86)         |
-|-------------|------------------------|--------------------------|
-| Instructions| Few & simple           | Many & complex           |
-| Speed       | Fast                   | Slower                   |
-| Power       | Low power              | High power               |
-| Usage       | Mobile, IoT, embedded  | Laptops, desktops        |
+---
 
+## ✅ Part 2: What is CISC?
+
+**CISC = Complex Instruction Set Computer**  
+A CPU design that uses **many complex instructions**, some of which may take **multiple cycles**.
+
+---
+
+### 🔴 Key Features of CISC:
+
+- Large instruction set (e.g., 200+ instructions)
+- One instruction can do **multiple things** (e.g., load + add + store)
+- Fewer registers
+- Hardware is **complex and power-hungry**
+
+---
+
+### 🛠️ Example Instructions (CISC – x86):
+
+```asm
+MOV AX, [BX]    ; Move from memory to AX directly  
+ADD AX, 10      ; Add 10 to AX
 ```
-## 4.Short History of ARM
-```
-| Year | Event                                   |
-|------|-----------------------------------------|
-| 1983 | First ARM chip by Acorn Computers       |
-| 1990 | ARM Holdings founded                    |
-| 2001 | ARM7 used in Nokia phones               |
-| 2010 | Cortex-M series → Embedded systems      |
-| 2020 | Apple M1/M2 → ARM in laptops            |
-```
-## 5.Where is ARM Used?
-```
-| Device           | Example                     | ARM Chip            |
-|------------------|-----------------------------|----------------------|
-| Smartphones      | iPhone, Samsung Galaxy       | Cortex-A             |
-| Embedded Systems | Smartwatch, Fitness bands    | Cortex-M             |
-| Automotive       | Car ECU, infotainment        | Cortex-R             |
-| IoT Devices      | Smart bulb, WiFi switches    | Cortex-M0/M4         |
-| Laptops/Tablets  | MacBook M1, iPad             | Apple ARM-based SoCs |
-```
-## 6.ARM vs x86 Comparison
-```
-| Feature        | ARM              | x86             |
-|----------------|------------------|-----------------|
-| Type           | RISC             | CISC            |
-| Power          | Low              | High            |
-| Instruction Set| Simple           | Complex         |
-| Used in        | Phones, IoT, MCUs| PCs, Servers    |
-| Cost           | Cheaper          | Costly          |
-```
-## 7.ARM Naming Confusion Simplified
-```
-| Name Type     | Meaning                                  |
-|---------------|------------------------------------------|
-| ARM7, ARM9    | Old families (legacy)                    |
-| Cortex-M      | For Microcontrollers (STM32, LPC)        |
-| Cortex-R      | For Real-time systems (automotive)       |
-| Cortex-A      | For Application Processors (phones)      |
-| Neoverse      | For Servers/Data Centers                 |
-```
-## 8.Why is ARM so Popular?
-```
-- Low power usage  
-- High performance per watt  
-- Licensable → others can customize (e.g. Apple M1)  
-- Small size → fits in embedded devices  
-- Growing ecosystem (STM32, Raspberry Pi, Android)
-```
-## 9.Quick Recap
-```
-- ARM = RISC-based, low power CPU architecture  
-- Used everywhere: phones, smartwatches, MCUs, laptops  
-- Designed by ARM Holdings  
-- Famous for Cortex-M, Cortex-A families  
-- Different from x86 (used in PCs)
-```
+### ❌ Disadvantages of CISC:
+
+- More complex CPU design  
+- Slower execution for some instructions  
+- Harder to pipeline
