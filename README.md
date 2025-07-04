@@ -72,24 +72,24 @@ Q)What is the difference between RISC and CISC?
 - **ARM** stands for **Advanced RISC Machine**  
 - It is a **RISC-based processor architecture**  
 - Created by a UK company named **ARM Holdings**  
-- **ARM Holdings licenses** the design, doesn't manufacture chips  
+- **ARM Holdings licenses** the design, doesn't manufacture chips. 
 
 **Examples of users**: Apple, Samsung, Qualcomm all use ARM cores.
 ```
 ### 2.Where is ARM Used?
 ```
-| Device           | Example                     | ARM Chip            |
-|------------------|-----------------------------|----------------------|
+| Device           | Example                      | ARM Chip             |
+|------------------|------------------------------|----------------------|
 | Smartphones      | iPhone, Samsung Galaxy       | Cortex-A             |
 | Embedded Systems | Smartwatch, Fitness bands    | Cortex-M             |
-| Automotive       | Car ECU, infotainment        | Cortex-R             |
+| Automotive       | Car ECU                      | Cortex-R             |
 | IoT Devices      | Smart bulb, WiFi switches    | Cortex-M0/M4         |
-| Laptops/Tablets  | MacBook M1, iPad             | Apple ARM-based SoCs |
+ 
 ```
 ### 3.Why is ARM so Popular?
 ```
 - Low power usage  
-- High performance per watt    
+- High performance 
 - Small size → fits in embedded devices  
 ```
 
@@ -102,9 +102,9 @@ Q)What is the difference between RISC and CISC?
 | 1990        | ARM Holdings Ltd. formed                               |
 | 1993–2000   | ARM7/ARM9 dominate embedded devices                    |
 | 2004        | Cortex series launched (M, A, R)                       |
-| 2010        | ARM becomes dominant in smartphones                    |
+| 2010        | ARM becomes dominate in smartphones                    |
 | 2020        | Apple shifts Macs to ARM-based M1 chip                 |
-| 2021+       | ARM enters data centers, AI, ML, automotive            |
+| 2021+       | ARM enters AI, ML, automotive                          |
 
 # Day 2: ARM Family Overview (ARM7, ARM9, Cortex-A / M / R)
 
