@@ -30,7 +30,7 @@ ADD AX, 10      ; Add 10 to AX
 A CPU design that uses a **small set of simple instructions** that execute very fast.
 
 ### Key Features of RISC:
-- Each instruction takes **1 clock cycle** to execute (ideally)
+- Each instruction takes **1 clock cycle** to execute 
 - Focuses on **simplicity and speed**
 - Uses **many general-purpose registers**
 - Fewer instruction formats → **easier decoding**
