@@ -1,6 +1,30 @@
 # Day 1: RISC vs CISC + Basic idea + History of ARM
 
-## Part 1: What is RISC?
+## Part 1: What is CISC?
+
+**CISC = Complex Instruction Set Computer**  
+A CPU design that uses **many complex instructions**, some of which may take **multiple cycles**.
+
+### Key Features of CISC:
+
+- Large instruction set (e.g., 200+ instructions)
+- One instruction can do **multiple things** (e.g., load + add + store)
+- Fewer registers
+- Hardware is **complex and power-hungry**
+
+### Example Instructions (CISC – x86):
+
+```asm
+MOV AX, [BX]    ; Move from memory to AX directly  
+ADD AX, 10      ; Add 10 to AX
+```
+### Disadvantages of CISC:
+
+- More complex CPU design  
+- Slower execution for some instructions  
+- Harder to pipeline
+
+## Part 2: What is RISC?
 
 **RISC = Reduced Instruction Set Computer**  
 A CPU design that uses a **small set of simple instructions** that execute very fast.
@@ -66,7 +90,7 @@ Q)What is the difference between RISC and CISC?
 | Execution Speed          | High                   | Moderate                 |
 | Used In                  | Mobiles, Embedded      | PCs, Laptops             |
 ```
-## Part 4: 1.What is ARM?
+## Part 4: 1.ARM?
 ```
 - **ARM** stands for **Advanced RISC Machine**  
 - It is a **RISC-based processor architecture**  
