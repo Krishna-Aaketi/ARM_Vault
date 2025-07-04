@@ -67,7 +67,7 @@ Q)What is the difference between RISC and CISC?
 | Execution Speed          | High                   | Moderate                 |
 | Used In                  | Mobiles, Embedded      | PCs, Laptops             |
 ```
-## Part 4: 1.ARM?
+## Part 4: 1.What is a ARM?
 ```
 - **ARM** stands for **Advanced RISC Machine**  
 - It is a **RISC-based processor architecture**  
