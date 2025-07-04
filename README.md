@@ -89,10 +89,8 @@ Q)What is the difference between RISC and CISC?
 ### 3.Why is ARM so Popular?
 ```
 - Low power usage  
-- High performance per watt  
-- Licensable → others can customize (e.g. Apple M1)  
+- High performance per watt    
 - Small size → fits in embedded devices  
-- Growing ecosystem (STM32, Raspberry Pi, Android)
 ```
 
 ### 4.History of ARM
