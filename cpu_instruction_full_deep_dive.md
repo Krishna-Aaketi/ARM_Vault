@@ -414,3 +414,120 @@ Assume the following instructions:
 ADD R1, R2, R3
 SUB R4, R1, R5
 LDR R6, [R0]
+
+# 🧠 System-Level Execution: `ADD R1, R2, R3`
+
+---
+
+## 🔹 Meaning
+**ADD R1, R2, R3** → Add the values of `R2` and `R3`, store result in `R1`.
+
+---
+
+## 🧱 Step-by-Step CPU Execution
+
+### 1. 🟦 Instruction Fetch (IF)
+
+- **Hardware:** Program Counter (PC), Instruction Memory, Instruction Register (IR)
+- **Action:**  
+  - PC → points to current instruction address (e.g., `0x1000`)
+  - Instruction memory returns binary for `ADD R1, R2, R3`
+  - Binary instruction stored in IR
+  - PC updates to next address (e.g., `0x1004`)
+
+---
+
+### 2. 🟦 Instruction Decode (ID)
+
+- **Hardware:** Control Unit, IR, Register File
+- **Action:**  
+  - Control Unit reads the binary instruction
+  - Determines it is an `ADD` operation
+  - Identifies source: R2, R3 and destination: R1
+  - Generates control signals to fetch operands and activate ALU
+
+---
+
+### 3. 🟦 Register Read
+
+- **Hardware:** Register File, Internal Buses
+- **Action:**  
+  - R2 and R3 values are read from the register file  
+  - Example: R2 = 5, R3 = 7
+  - Operands sent to ALU
+
+---
+
+### 4. 🟦 Execute (EX)
+
+- **Hardware:** Arithmetic Logic Unit (ALU)
+- **Action:**  
+  - ALU performs: 5 + 7 = 12
+  - No memory access required for ADD
+
+---
+
+### 5. 🟦 Writeback (WB)
+
+- **Hardware:** Register File
+- **Action:**  
+  - ALU result (12) written back to R1
+
+✅ Final Result: `R1 = 12`
+
+---
+
+## 🧠 Key Hardware Involved
+
+| Unit              | Role                                  |
+|-------------------|----------------------------------------|
+| Program Counter   | Points to next instruction             |
+| Instruction Mem   | Stores instruction set                 |
+| Instruction Reg   | Holds current instruction              |
+| Control Unit      | Decodes and directs operations         |
+| Register File     | Stores all registers (R0–Rn)           |
+| ALU               | Executes the ADD operation             |
+| Buses             | Internal data transfer paths           |
+
+---
+
+## 🔄 Timeline Overview
+
+| Clock Cycle | Stage         | Action                          |
+|-------------|---------------|---------------------------------|
+| 1           | Fetch         | Load instruction from memory    |
+| 2           | Decode        | Identify ADD, R2, R3, R1        |
+| 3           | Register Read | Load R2, R3 values              |
+| 4           | Execute       | ALU computes R2 + R3            |
+| 5           | Writeback     | Result written to R1            |
+
+---
+
+## 🖼️ Concept Diagram (Textual)
++-----------------------------+
+|        Instruction          |
+|   ADD R1, R2, R3            |
++-----------------------------+
+         ↓
++---------------------+       Fetch
+| Program Counter     | ---> [Instruction Memory]
++---------------------+          ↓
+                           Instruction Register (IR)
+                                    ↓
+                            Control Unit Decodes
+                       ↙                      ↘
+               [Read R2]                 [Read R3]
+                       ↓                      ↓
+                     Value                  Value
+                       ↘                      ↙
+                      +--[ ALU ]-- ADD R2+R3 = 12
+                               ↓
+                      [Write to Register R1]
+
+---
+
+## ✅ Summary
+
+- `ADD R1, R2, R3` goes through 5 stages
+- Uses ALU and Register File only
+- Result is stored in destination register
