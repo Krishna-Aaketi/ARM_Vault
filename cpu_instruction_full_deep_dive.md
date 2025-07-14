@@ -171,6 +171,8 @@ ARM uses fixed-width 32-bit instructions, but formats can vary depending on the 
 ## 🖼️ Instruction Format Visual
 
 Check out this image:  
-📊 [Instruction Diagram](https://yourserver.com/path/to/cpu_instruction_structure_diagram.png)
+📊## 🧠 Structure of a 32-bit CPU Instruction (Example Format)
+
+![Structure of a 32-bit CPU Instruction](./58ee2b3b-c3f4-45d2-833c-fae0b16831a1.png)
 
 
