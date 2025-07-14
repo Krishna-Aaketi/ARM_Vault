@@ -301,6 +301,9 @@ ADD R1, R2, R3
 
 ## 🔬 System-Level Step-by-Step Execution
 
+<img width="1589" height="390" alt="409dbe8f-4093-4f89-bf0f-c7a314a6939e" src="https://github.com/user-attachments/assets/5c0c09ea-a7a3-4c43-b8f8-7ced3e9ee9e2" />
+
+
 ### 🔹 1. Instruction Fetch (IF)
 - `PC` sends instruction address to memory
 - Instruction (`ADD R1, R2, R3`) is loaded into Instruction Register
