@@ -414,6 +414,7 @@ Assume the following instructions:
 ADD R1, R2, R3
 SUB R4, R1, R5
 LDR R6, [R0]
+```
 
 # 🧠 System-Level Execution: `ADD R1, R2, R3`
 
