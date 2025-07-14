@@ -367,3 +367,50 @@ R1 = 5 + 7 = 12
 | Writeback| Save result to `R1`               | `R1 = 12`        |
 
 
+# 🚀 What is a CPU Pipeline?
+---
+
+## ✅ Definition
+
+A **pipeline** in a CPU is like an **assembly line**. It allows the processor to work on **multiple instructions at the same time**, but in **different stages**.
+
+> 🧠 Goal: Improve instruction throughput (more instructions per clock cycle)
+
+---
+
+## 🏭 Real-World Analogy
+
+Imagine a car factory 🏭:
+
+| Stage         | Action                        |
+|---------------|-------------------------------|
+| Stage 1       | Chassis built                 |
+| Stage 2       | Engine installed              |
+| Stage 3       | Body painted                  |
+| Stage 4       | Interior added                |
+| Stage 5       | Quality check                 |
+
+Once Stage 1 finishes a car, it immediately starts the next one. That’s how a pipeline works!
+
+---
+
+## 🧱 Classic 5-Stage CPU Pipeline
+
+| Stage      | Name            | What it does                                               |
+|------------|------------------|-------------------------------------------------------------|
+| 1️⃣         | Fetch (IF)       | Get instruction from memory                                 |
+| 2️⃣         | Decode (ID)      | Decode instruction and identify registers and operation     |
+| 3️⃣         | Execute (EX)     | ALU performs operation (add, subtract, etc.)                |
+| 4️⃣         | Memory (MEM)     | Load from / Store to memory (for LDR/STR instructions)      |
+| 5️⃣         | Writeback (WB)   | Write result back to register                               |
+
+---
+
+## 🌀 Pipeline Flow Example
+
+Assume the following instructions:
+
+```asm
+ADD R1, R2, R3
+SUB R4, R1, R5
+LDR R6, [R0]
