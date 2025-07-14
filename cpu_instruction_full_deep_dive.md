@@ -270,3 +270,100 @@ Add the values in `R2` and `R3`, and store the result in `R1`.
 - ✅ Each CPU architecture (ARM, x86, MIPS) has its **own ISA**
 - ✅ Knowing the ISA is critical for **low-level programming**, **OS**, **compilers**, and **embedded systems**
 
+
+
+# 🧠 Deep Dive: What Happens During `ADD R1, R2, R3`
+
+---
+
+## 📝 Instruction Meaning
+
+```asm
+ADD R1, R2, R3
+```
+
+- Add contents of register `R2` and `R3`
+- Store the result into register `R1`
+
+---
+
+## 🧱 High-Level Execution Stages
+
+| Stage      | Description                            |
+|------------|----------------------------------------|
+| Fetch      | Get the instruction from memory        |
+| Decode     | Understand what operation to perform   |
+| Execute    | Perform the addition using ALU         |
+| Writeback  | Store the result into destination reg  |
+
+---
+
+## 🔬 System-Level Step-by-Step Execution
+
+### 🔹 1. Instruction Fetch (IF)
+- `PC` sends instruction address to memory
+- Instruction (`ADD R1, R2, R3`) is loaded into Instruction Register
+
+---
+
+### 🔹 2. Instruction Decode (ID)
+- Control Unit decodes binary:
+  - Opcode → `ADD`
+  - Operands → `R2`, `R3`
+  - Destination → `R1`
+- Control signals prepared
+
+---
+
+### 🔹 3. Register Read
+- Values of `R2` and `R3` are fetched
+- Example: `R2 = 5`, `R3 = 7`
+
+---
+
+### 🔹 4. Execute (EX)
+- ALU performs `R2 + R3 = 12`
+
+---
+
+### 🔹 5. Writeback (WB)
+- Result `12` is written into `R1`
+
+---
+
+## 🧠 CPU Units Involved
+
+| Component         | Function                               |
+|------------------|----------------------------------------|
+| Program Counter   | Holds address of next instruction      |
+| Instruction Reg   | Holds the current instruction          |
+| Control Unit      | Decodes instruction, manages flow      |
+| Register File     | Stores registers like R1, R2, R3       |
+| ALU               | Performs arithmetic (ADD in this case) |
+| Data Bus          | Moves data between components          |
+
+---
+
+## 🧠 Final Result
+```
+R1 = R2 + R3
+R1 = 5 + 7 = 12
+```
+
+---
+
+## 🖼️ Execution Pipeline Diagram
+![Execution Pipeline](cpu_add_instruction_diagram.png)
+
+---
+
+## ✅ Summary Table
+
+| Step     | Action                            | Result          |
+|----------|-----------------------------------|-----------------|
+| Fetch    | Load `ADD R1, R2, R3`             | Instruction Ready |
+| Decode   | Identify `ADD`, R2, R3, R1        | Control Signals  |
+| Execute  | ALU: `R2 + R3`                    | Output = 12      |
+| Writeback| Save result to `R1`               | `R1 = 12`        |
+
+
