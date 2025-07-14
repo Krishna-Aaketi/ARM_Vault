@@ -505,6 +505,7 @@ LDR R6, [R0]
 ---
 
 ## 🖼️ Concept Diagram (Textual)
+```
 +-----------------------------+
 |        Instruction          |
 |   ADD R1, R2, R3            |
@@ -525,6 +526,7 @@ LDR R6, [R0]
                                ↓
                       [Write to Register R1]
 
+```
 ---
 
 ## ✅ Summary
